@@ -28,7 +28,7 @@ char* memeText(char* text){
             *text_ = "i";
         }
     }
-    return (*text_);
+    return (*text);
 }
 
 int main(int argc, char *argv[]){
