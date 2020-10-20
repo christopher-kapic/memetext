@@ -2,6 +2,8 @@
 #include <stdlib.h>
 using namespace std;
 
+// Reference https://www.educative.io/edpresso/what-is-the-toupper-function-in-c
+
 char* memeText(char* text){
     char* text_ = text;
     size_t size = sizeof(text_) / sizeof(text_[0]);
