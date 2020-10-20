@@ -1,40 +1,31 @@
-// #include <iostream>
-
-// char *finalString(char *s)
-// {
-// }
-
-// int main(int argc, char *argv[])
-// {
-//     if (!argv[1])
-//     {
-//         fprintf(stderr, "Please provide text for\n");
-//         return 1;
-//     }
-
-//     return 0;
-// }
-
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
 
 char* memeText(char* text){
     char* text_ = text;
-    for (; *text_ != "\0"; text_++) {
+    size_t size = sizeof(text_) / sizeof(text_[0]);
+
+    for (int i = 0; i < size; i++) {
         if (rand() % 2 == 0){
-            *text_ = "e";
+            std::cout << "Random a\n";
+            text_[i] = "a";
         } else {
-            *text_ = "i";
+            text_[i] = "b";
         }
+
     }
-    return (*text);
+
+    return (text_);
 }
+
 
 int main(int argc, char *argv[]){
     if (!argv[1]){
         std::cerr << "Please provide an argument for memetext.\n";
     }
-
-    return memeText(argv[1]);
+    
+    std::cout << memeText(argv[1]);
+    std::cout << "\n";
+    return 0;
 }
